@@ -1,0 +1,730 @@
+@charset 'utf-8';
+@import url(font.css);
+
+body {
+  font-family: 'Noto Serif KR', serif;
+  color: #555;
+}
+
+/* header */
+header {
+  position: relative;
+  z-index: 10;
+  padding-top: 40px;
+}
+header .top_header {
+  position: relative;
+  padding: 0 8%;
+  margin-bottom: 60px;
+  text-align: center;
+}
+header .top_header .logo > a {
+  display: inline-block;
+  width: 161px;
+  height: 60px;
+  background: url(../img/common/sam-logo.png) no-repeat center/cover;
+}
+.top_header .book_area {
+  position: absolute;
+  top: 0;
+  right: 8%;
+}
+.top_header .book_area > .btn_book {
+  display: inline-block;
+  padding: 8px 15px;
+  border: 1px solid #ccc;
+  border-radius: 40px;
+  font-size: 14px;
+}
+.top_header .book_area > .btn_menu {
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+  transition: all 0.3s;
+  margin: 0 20px;
+  vertical-align: middle; /* 인라인요소간의 높이를 기준으로 정렬하는 속성으로 블록요소에는 적용되지 않음. */
+  transition: all 0.7;
+}
+.top_header .book_area > .btn_menu img {
+  max-width: 100%;
+  height: auto;
+  opacity: 0.6; /* 요소의 불투명도 - opacity 속성을 부모요소에 선언하면 자식요소도 모두 불투명도가 적용되므로 잘 구분해서 선언해야함. */
+}
+.top_header .book_area > .btn_menu:hover {
+  transform: rotate(180deg); /* rotate는 회전각으로 움직이므로 단위가 degree의 약자인 deg를 단위로 씀 */
+}
+.top_header .sns_area {
+  position: absolute;
+  top: 0;
+  left: 8%;
+}
+/* gnb */
+.gnb {
+  width: 70vw;
+  height: 40px;
+  margin: 0 auto 30px;
+}
+.gnb > .depth1 > li {
+  position: relative;
+  float: left;
+  width: calc(100%/7);
+}
+.gnb > .depth1 > li > a {
+  padding: 0 35px;
+  height: 40px;
+  line-height: 40px;
+  letter-spacing: -1px;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.8);
+}
+.gnb > .depth1 > li > a:hover {
+  color: #000;
+}
+.gnb > .depth1 .depth2 {
+  position: absolute;
+  width: 100%;
+  padding: 15px;
+  background-color: #fff;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+  box-sizing: border-box;
+  display: none;
+}
+.gnb > .depth1 .depth2 a {
+  line-height: 32px;
+  font-size: 15px;
+}
+.gnb > .depth1 > li:hover .depth2 {
+  display: block;
+}
+.gnb > .depth1 .depth2 a:hover {
+  color: #ae3c3c;
+}
+
+/* swiper */
+.swiper {
+  overflow: hidden;
+  position: relative;
+  width: 80vw;
+  height: 600px;
+  margin: 0 auto;
+}
+.swiper-wrapper .swiper-slide {
+  height: 100%;
+  height: 100%;
+  background: url(../img/about/동백헌.jpg) no-repeat center/cover;
+}
+.swiper-wrapper .swiper-slide:nth-child(2) {
+  background-image: url(../img/about/삼청각배경.jpg);
+}
+.swiper-wrapper .swiper-slide:nth-child(3) {
+  background-image: url(../img/about/유하정.jpg);
+}
+.swiper-wrapper .swiper-slide:nth-child(3) {
+  background-image: url(../img/about/일화당.jpg);
+}
+.swiper-wrapper .swiper-slide:nth-child(4) {
+  background-image: url(../img/about/천주당.jpg);
+}
+.swiper-wrapper .swiper-slide:nth-child(5) {
+  background-image: url(../img/about/취한당.jpg);
+}
+/* story */
+#story h2 {
+  font-size: 34px;
+  font-weight: 400;
+  margin-left: 175px;
+  margin-bottom: 0;
+  color: #c8a591;
+}
+#story .title_area {
+  float: left;
+  width: 35%;
+}
+#story .story_text {
+  float: right;
+  width: 60%;
+  background: url(../img/common/sam-logo-side-w.png) no-repeat right bottom;
+}
+
+#story .story_text .text {
+  font-size: 18px;
+  color: #8c5f46;
+  line-height: 1.7;
+  margin-bottom: 25px;
+}
+
+/* show */
+.show .title_area {
+    float: right;
+    width: 75%;
+    margin-bottom: 80px;
+  }
+.show .title_area .left_title {
+  float: left;
+  width: 50%;
+  margin-top: 15px;
+}
+.show .title_area .left_title h2 {
+  position: relative;
+  font-weight: 400;
+  border-bottom: 1px solid rgba(200, 165, 145, 0.5);
+}
+.show .title_area .left_title h2:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 68%;
+  height: 1px;
+  background: #8c5f46;
+}
+.show .title_area .left_title h2 > span {
+  font-weight: 600;
+}
+.show .title_area .tit_outline {
+  float: right;
+  width: 45%;
+}
+.show .show_group > li {
+  overflow: hidden;
+  float: left;
+  width: 47.5%;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+.show .show_group > li + li {
+  margin-left: 5%;
+}
+.show .show_group img {
+  float: left;
+  width: 250px;
+  height: auto;
+}
+.show .show_group .show_info {
+  float: right;
+  width: calc(100% - 250px - 50px);
+  margin-left: 50px;
+}
+.show .show_info .show_cat {
+  margin-bottom: 25px;
+}
+.show .show_info .show_cat span {
+  padding: 3px 8px;
+  border-radius: 5px;
+  margin-right: 5px;
+  color: #fff;
+  background: #10505a;
+  font-size: 14px;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+.show .show_info .show_cat .show_ing {
+  background: #ae3c3c;
+}
+.show .show_info .show_cat .show_ing.class {
+  background: #c6ae29;
+}
+.show .show_info .detail .show_title_link {
+  display: inline-block;
+  font-size: 22px;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.8);
+  margin-bottom: 10px;
+}
+.show .show_info .detail .tit_sub {
+  font-weight: 400;
+  font-family: 'Noto Sans KR', sans-serif;
+  color: rgba(0, 0, 0, 0.7);
+  margin-bottom: 25px;
+}
+.show .show_info .detail_list {
+  margin-bottom: 30px;
+}
+.show .show_info .detail_list > li {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 15px;
+  margin-bottom: 3px;
+}
+.show .show_info .ex_info {
+  font-size: 15px;
+  font-family: 'Noto Sans KR', sans-serif;
+  height: 260px;
+}
+.show .show_info .ex_info div {
+  margin-bottom: 8px;
+}
+.show .show_info .ex_info dt {
+  float: left;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.9);
+}
+.show .show_info .ex_info dd {
+  float: left;
+  margin-left: 20px;
+}
+.show .show_info .ex_info .mt25 {
+  margin-top: 25px;
+}
+.show .show_info .btn_area {
+  text-align: right;
+}
+.show .show_info .btn_area > a {
+  display: inline-block;
+  padding: 10px 30px;
+  border-radius: 40px;
+  border: 1px solid #8c5f46;
+  color: #8c5f46;
+  margin: 0 5px;
+  transition: all 0.3s;
+}
+.show .show_info .btn_area .james {
+  background: #8c5f46;
+  color: #fff;
+  /* 내가 추가한거 */
+}
+.show .show_info .btn_area .james:hover {
+  background: white;
+  color: #8c5f46;
+  /* 내가 추가한거 */
+}
+.show .show_info .btn_area > a:hover {
+  background: #8c5f46;
+  color: #fff;
+}
+/* hall_group */
+.hall_group .title_area {
+  margin-bottom: 40px;
+  overflow: hidden;
+}
+.hall_group .title_area .left_title {
+  float: left;
+  width: 60%;
+}
+.hall_group .title_area .left_title h2 {
+  position: relative;
+  font-weight: 400;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(200, 165, 145, 0.5);
+}
+.hall_group .title_area .left_title h2:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 22%;
+  height: 1px;
+  background: #8c5f46;
+}
+.hall_group .title_area .left_title h2 > span {
+  font-weight: 600;
+}
+.hall_group .title_area .left_title .big {
+  font-weight: 400;
+}
+.hall_group .title_area .tit_outline {
+  float: right;
+  width: 30%;
+}
+.hall_group .hall_list > li {
+  float: left;
+  width: calc(100%/3 - 5%);
+  margin-left: 5%;
+  margin-bottom: 70px;
+}
+.hall_group .hall_list > li figure {
+  position: relative;
+  overflow: hidden;
+  height: 250px;
+  margin-bottom: 30px;
+}
+.hall_group .hall_list > li figure:before {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  opacity: 0;
+  transition: all 0.3s;
+}
+.hall_group .hall_list > li figure:hover:before {
+  opacity: 0.3;
+}
+.hall_group .hall_list > li figure img {
+  max-width: 100%;
+  height: auto;
+}
+.hall_group .hall_list .hall_text {
+  position: relative;
+}
+.hall_group .hall_list .hall_text .title {
+  font-size: 20px;
+  font-weight: 500;
+  color: #8c5f46;
+  margin-bottom: 15px;
+}
+.hall_group .hall_list .hall_text .text {
+  color: #c8a591;
+}
+.hall_group .hall_list .hall_text .btn_view {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: #8c5f46;
+  font-size: 14px;
+  width: 50%;
+  text-align: right;
+}
+.hall_group .hall_list .hall_text .btn_view:before {
+  position: absolute;
+  content: '';
+  top: 50%;
+  left: 30px;
+  background: rgba(200, 165, 145, 0.5);
+  width: 60%;
+  height: 1px;
+}
+.hall_group .hall_list .hall_text .btn_view:after {
+  position: absolute;
+  content: '';
+  top: 50%;
+  left: 30px;
+  background: #8c5f46;
+  width: 0;
+  height: 1px;
+  transition: all 0.8s;
+}
+.hall_group .hall_list figure:hover + .hall_text .btn_view:after {
+  width: 60%;
+}
+
+/* do_hall */
+.hall_group.do_hall {
+  background: #f0f0f0;
+}
+.hall_group.do_hall .hall_list > li {
+  float: left;
+  width: calc(100%/2 - 5%);
+  margin-left: 5%;
+  margin-bottom: 70px;
+}
+.hall_group.do_hall .hall_list > li figure {
+  position: relative;
+  overflow: hidden;
+  height: 380px;
+  margin-bottom: 30px;
+}
+/* event-새단장 개관 */
+.event {
+  position: relative;
+  padding: 0;
+  height: 300px;
+  background: url(../img/about/취한당.jpg) no-repeat center top/cover;
+}
+.event:before {
+  position: absolute;
+  content: '';
+  top: 0; 
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+.event .event_text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  text-align: center;
+}
+.event .event_text .text1 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+.event .event_text .text2 {
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+.event .event_text .btn_more {
+  padding: 10px 30px;
+  border-radius: 40px;
+  background: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  color: #8c5f46;
+}
+/* 찾아 오시는길 */
+.news h3 {
+  font-size: 28px;
+  color: #8c5f46;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+.news .left_area {
+  float: left;
+  width: 48%;
+}
+.news .use_list {
+  margin-left: -25px;
+}
+.news .use_list > li {
+  float: left;
+  width: calc(100%/3 - 25px);
+  margin-left: 25px;
+  border-radius: 10px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s;
+  overflow: hidden;
+}
+.news .use_list > li:hover {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  
+}
+.news .use_list > li:hover figure img {
+  transform: scale(1.05);
+}
+.news .use_list > li figure {
+  height: 115px;
+}
+.news .use_list > li figure img {
+  max-width: 100%;
+  height: auto;
+  transition: all 0.4s;
+}
+.news .use_list > li .use_text {
+  padding: 15px;
+  text-align: center;
+}
+.news .use_list > li .use_text h4 {
+  margin-top: 10px;
+  margin-bottom: 30px;
+  font-size: 18px;
+  font-weight: 600;
+}
+.news .use_list > li .use_text span {
+  font-size: 14px;
+}
+.news .use_list > li .use_text h4 {
+  position: relative;
+  margin-top: 10px;
+  font-size: 18px;
+  font-weight: 600;
+}
+.news .use_list > li .use_text h4::before {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translate(-50%); /* x축으로만 이동시킴 */
+  width: 25px;
+  height: 1px;
+  background: #898989;
+}
+.news .use_list > li .use_text .text {
+  margin-top: 10px;
+  font-size: 14px;
+  line-height: 1.7;
+}
+.news .left_area .notice {
+  position: relative;
+  margin-top: 60px;
+}
+.news .left_area .notice .btn_more {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 14px;
+}
+.news .left_area .notice .btn_more::before {
+  content: '';
+  position: absolute;
+  top: 12px;
+  left: -100%;
+  width: 20px;
+  height: 1px;
+  background: rgba(0, 0, 0, 0.7);
+}
+.news .left_area .notice .notice_li li {
+  margin-bottom: 20px;
+}
+.news .left_area .notice_list .date_area {
+  float: left;
+  width: 80px;
+  height: 80px;
+  background: rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.news .left_area .notice_list .date_area .date {
+  font-size: 34px;
+  font-weight: 700;
+  line-height: 1.1;
+  color: rgba(0, 0, 0, 0.3);
+}
+.news .left_area .notice_list .date_area .yymm {
+  font-size: 15px;
+  color: rgba(0, 0, 0, 0.3);
+}
+.news .left_area .notice_list .notice_title {
+  float: left;
+  width: calc(100% - 80px - 30px);
+  margin-left: 30px;
+  padding: 5px 0;
+}
+.news .notice_list .list_title {
+  font-size: 18px;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+
+.news .right_area {
+  float: right;
+  width: 47%;
+  position: relative;
+}
+.news .right_area .adress {
+  margin-top: 40px;
+}
+.news .right_area .adress dt {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+.news .right_area .adress dd p {
+  position: relative;
+  margin-bottom: 10px;
+  padding-left: 12px;
+}
+.news .right_area .adress dd p::before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: 0;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  border: 1px solid #898989;
+}
+.news .right_area .btn_area {
+  margin-top: 35px;
+}
+.news .right_area .btn_area > a {
+  padding: 8px 25px;
+  border-radius: 5px;
+  background: rgba(0, 0, 0, 0.35);
+  color: #fff;
+  margin-right: 8px;
+}
+.news .right_area .btn_area .btn_map {
+  color: rgba(0, 0, 0, 0.35);
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.35);
+}
+.news .right_area .map iframe {
+  width: 100%;
+}
+.news .right_area .btn_more {
+  position: absolute;
+  top: 12px;
+  right: 0;
+}
+.news .right_area .btn_more::before {
+  content: '';
+  position: absolute;
+  top: 12px;
+  left: -100%;
+  width: 20px;
+  height: 1px;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+/* footer */
+footer {
+    background: rgba(0, 0, 0, 0.2);
+    padding: 45px 0;
+}
+footer .f_left {
+  float: left;
+}
+footer .f_left .f_title {
+  margin-bottom: 60px;
+  font-size: 24px;
+  font-weight: 600;
+}
+footer .f_left .f_title span {
+  display: inline-block;
+  width: 60px;
+  margin-bottom: 30px;
+}
+footer .f_left .f_title span img {
+  max-width: 100%;
+}
+footer .f_left .copy {
+  font-size: 14px;
+  opacity: 0.6;
+}
+footer .f_right {
+  float: right;
+}
+footer .f_right div {
+  margin-bottom: 20px;
+}
+footer .f_right dt {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: rgba(0, 0, 0, 0.7);
+}
+footer .f_right dd {
+  font-size: 15px;
+}
+footer .f_right dd a {
+  display: inline-block;
+  margin: 8px;
+}
+
+
+/* 공통요소 */
+section {
+  padding: 100px 0 50px;
+}
+.inner {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+section .big {
+  font-size: 20px;
+  margin-bottom: 25px;
+  color: #8c5f46;
+  font-weight: 600;
+  line-height: 1.8;
+}
+.title_area h2 {
+  font-size: 44px;
+  color: #8c5f46;
+  margin-bottom: 15px;
+  font-weight: 600;
+
+}
+.title_area .tit_outline {
+  font-weight: 700;
+  color: #c8a591;
+  font-size: 110px;
+}
+.title_area .tit_outline > span {
+  color: #fff;
+  text-shadow: -1px -1px 0 #c8a591,
+                1px -1px 0 #c8a591,
+                -1px 1px 0 #c8a591,
+                1px 1px 0 #c8a591;
+}
